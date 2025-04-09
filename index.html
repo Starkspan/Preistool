@@ -3,13 +3,14 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starkspan CNC Preisrechner</title>
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <img src="logo.png" alt="Starkspan Logo" class="logo">
-        <h1>CNC PREISRECHNER</h1>
+        <h1>CNC Preisrechner</h1>
     </header>
     <main>
         <form id="cncForm">
@@ -29,12 +30,6 @@
                 <option value="eloxieren">Eloxieren</option>
             </select>
 
-            <label for="roughness">Oberflächenrauheit:</label>
-            <input type="text" id="roughness" placeholder="z.B. Ra 1.6">
-
-            <label for="targetPrice">Zielpreis pro Stück (€):</label>
-            <input type="number" id="targetPrice" step="0.01">
-
             <label for="quantity">Stückzahl:</label>
             <select id="quantity">
                 <option value="1">1</option>
@@ -48,10 +43,15 @@
                 <option value="500">500</option>
             </select>
 
-            <button type="button" onclick="calculatePrice()">PREIS BERECHNEN</button>
+            <label for="targetPrice">Zielpreis pro Stück (€):</label>
+            <input type="number" id="targetPrice" step="0.01">
+
+            <button type="button" onclick="calculatePrice()">Preis berechnen</button>
         </form>
+
         <div id="result"></div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
